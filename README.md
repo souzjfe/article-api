@@ -35,9 +35,15 @@ Abaixo, o comparativo entre o solicitado e o entregue, incluindo melhorias adici
 
 ## Considerações e Escolhas Técnicas
 
-> *Espaço reservado para descrever as decisões arquiteturais, desafios enfrentados e justificativas para as escolhas tomadas durante o desenvolvimento.*
+- **ORM (TypeORM)**: A escolha pelo TypeORM, em detrimento de ORMs mais recentes (como Prisma ou Drizzle), deve-se à sua integração com o ecossistema NestJS. Além disso, essa escolha permitiu demonstrar conhecimento prático na configuração e gerenciamento de *migrations*.
 
-*(O usuário descreverá esta seção a seguir)*
+- **Documentação (OpenAPI/Swagger)**: Embora não fosse um requisito explícito, a implementação do Swagger foi realizada para facilitar o processo de testes manuais e o consumo da API durante o desenvolvimento, servindo como uma interface visual imediata.
+
+- **Arquitetura**: Optou-se pela arquitetura modular padrão recomendada pelo NestJS. Apesar do conhecimento em padrões arquiteturais mais complexos, como *DDD (Domain-Driven Design)* e *Clean Architecture*, a abordagem padrão foi escolhida por ser mais objetiva e pragmática para o escopo atual da aplicação, evitando complexidade acidental.
+
+- **Versionamento de API**: A API foi iniciada sem versionamento seguindo [a documentação oficial do NestJS](https://docs.nestjs.com/techniques/versioning) para evitar complexidade desnecessária devido à sua simplicidade inicial. No entanto, reconheço que essa é uma prática essencial para garantir a escalabilidade e a retrocompatibilidade em cenários de evolução do produto a longo prazo.
+
+- **Qualidade de Código (Testes e Linter)**: A implementação rigorosa de testes unitários e a configuração do ESLint foram fundamentais. Essas ferramentas não apenas garantiram a qualidade e estabilidade do código, mas também serviram como "balizas" para auxiliar o fluxo de desenvolvimento e fornecer diretrizes claras para a IA durante o pair programming.
 
 ---
 
